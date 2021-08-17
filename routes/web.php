@@ -22,7 +22,8 @@ Route::fallback(function () {
   $url = Request::fullUrl();
   $searching_word = "bimabd.com";
   $replacing_word = "bimafy.com";
-  $updated_url = str_replace( $searching_word, $replacing_word, $url );
+  $url = str_replace( $searching_word, $replacing_word, $url );
+  return Redirect::to($url);
   // echo Request::root();
-  echo $updated_url;
+  // echo $url;
 });
